@@ -1,0 +1,32 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.button {
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 200ms, color 200ms;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding-inline: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(119, 114, 114, 0.842);
+}
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto;
+}

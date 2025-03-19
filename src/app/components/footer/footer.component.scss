@@ -1,0 +1,17 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    & li {
+        font-size: 14px;
+    }
+}

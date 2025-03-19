@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <h2 class="title">Popular categories</h2>
+    <div class="list">
+      <div class="category" *ngFor="let category of topCategories">
+        <h3 class="category__name">{{ category.name }}</h3>
+
+        <img class="category__cover" src="{{category.icons[0].url}}" width="{{category.icons[0].width}}" height="{{category.icons[0].height}}">
+      </div>
+    </div>
+  </div>
