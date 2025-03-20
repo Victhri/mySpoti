@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SpotifyAuthService {
+export class AccessTokenService {
 
   private clientId = '41214f9127114a028da6a06c673a2446';
   private clientSecret = '034b5a521995422bae629a6c5d8009fe';
