@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AccessTokenService } from '../services/access-token/access-token.service';
+import { take } from 'rxjs';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
   constructor(private accessTokenService: AccessTokenService) {}
 
   ngOnInit() {
-    this.accessTokenService.getToken().subscribe(
+    this.accessTokenService.getToken()
+    .pipe(take(1)).subscribe(
       (response: any) => {
         localStorage.setItem('spotify_access_token', response.access_token);
     })
