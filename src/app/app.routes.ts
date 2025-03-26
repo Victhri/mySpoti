@@ -4,5 +4,5 @@ import { CategoryPageComponent } from './pages/category-page/category-page.compo
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
-    { path: 'category', component: CategoryPageComponent }
+    { path: 'category/:id', component: CategoryPageComponent }
 ];

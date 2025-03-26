@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CategoriesInfoService } from '../../../services/categories-info/categoris-info.service';
 
 @Component({
@@ -7,14 +7,13 @@ import { CategoriesInfoService } from '../../../services/categories-info/categor
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
   public topCategories: any[] = [];
-  constructor(private categories: CategoriesInfoService) {
-      const token = localStorage.getItem('spotify_access_token');
-      if(token) {
-        this.categories.getCategoriesInfo(token).subscribe(data => {
-        this.topCategories = data.categories.items; 
-        })
-      }
-  }
+  constructor(private categories: CategoriesInfoService) {}
+
+  ngOnInit(): void {
+      this.categories.getCategoriesInfo().subscribe(data => {
+      this.topCategories = data.categories.items; 
+      })
+    } 
 }
