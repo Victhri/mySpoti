@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { AuthTokenService } from "../../../services/tokens/auth-token.service";
 
 @Component({
     standalone: false,
@@ -9,4 +10,9 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
       
 })
 
-export class HeaderComponent {}
+export class HeaderComponent {
+    constructor(private authToken: AuthTokenService) {}
+    loginToSpotify() {
+        window.location.href = this.authToken.getAuthorizationUrl();
+    }
+}

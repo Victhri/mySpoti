@@ -9,6 +9,7 @@ import { HomePageModule } from './pages/home-page/home-page.module';
 import { routes } from './app.routes';
 import { CategoryPageModule } from './pages/category-page/category-page.module';
 import { AccessTokenInterceptor } from '../interceptors/access-token-interceptor';
+import { CallbackModule } from './pages/callback/callback.module';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { AccessTokenInterceptor } from '../interceptors/access-token-interceptor
     RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule,
-    RouterModule, FooterModule, HeaderModule, HomePageModule, CategoryPageModule
+    RouterModule, FooterModule, HeaderModule, HomePageModule, CategoryPageModule, CallbackModule
   ],
   providers: [
     {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AccessTokenService } from '../services/access-token/access-token.service';
+import { AccessTokenService } from '../services/tokens/access-token.service';
 import { take } from 'rxjs';
 
 
