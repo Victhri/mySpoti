@@ -1,2 +1,16 @@
-<p>category-page works!</p>
+<h1 class="title">{{category?.name}}</h1>
+<div class="list">
+    <a *ngFor="let list of playlists" 
+        class="list-item" 
+        href='{{list?.external_urls.spotify}}'
+        target="_blank">
+        <img [src]="list?.images[0].url" height="100" width="100" class="list-item__img"/>
+        <section>
+            <h2 class="list-item__name">{{list?.name}}</h2>
+            <h2 class="list-item__description">{{list?.description}}</h2>
+        </section>
+    </a>
+</div>
+
+
 
